@@ -1,0 +1,49 @@
+@import "tailwindcss";
+
+@theme inline {
+  --font-sans:
+    ui-sans, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+  --font-mono:
+    ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
+    "Courier New", monospace;
+
+  /* House of Mzozoyana brand palette */
+  --color-brand: #0d5942; /* deep emerald — bold, tech-forward, grounded */
+  --color-brand-hover: #0f6e52;
+  --color-brand-soft: #ecfdf5; /* emerald 50 tint */
+  --color-border: #e5e7eb;
+  --color-border-dark: #d1d5db;
+}
+
+/*
+  The business profile is a single, carefully laid-out document. We keep a
+  light, high-contrast canvas so the content is comfortable to read and easy
+  to review.
+*/
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 4.5rem;
+}
+
+body {
+  background: #ffffff;
+  color: #1f2937;
+  font-family: var(--font-sans);
+  line-height: 1.625;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@layer base {
+  html {
+    font-size: 16px;
+  }
+}
+
+/* Custom selection colour that respects the brand. */
+::selection {
+  background-color: #d1fae5;
+  color: #0d5942;
+}
+
