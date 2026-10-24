@@ -3,26 +3,32 @@ import { profile } from "@/data/profile";
 
 export default function Hero() {
   return (
-    <section className="mx-auto flex w-full max-w-4xl flex-col items-center gap-8 px-6 py-20 text-center md:py-28 md:px-8">
+    <section className="mx-auto flex w-full flex-col items-center gap-6 px-6 py-24 text-center md:py-32 md:px-8">
       <Image
         src="/logo.png"
         alt={`${profile.company} logo`}
-        width={120}
-        height={120}
-        className="h-24 w-24 rounded-2xl object-contain drop-shadow-[0_0_12px_rgba(200,164,92,0.55)]"
+        width={500}
+        height={500}
+        className="h-64 w-64 object-contain"
         priority
       />
-      <div>
-        <h1 className="text-4xl font-extrabold tracking-tight text-white sm:text-5xl">
-          {profile.company}
-        </h1>
-        <p className="mt-4 max-w-2xl text-lg text-body">{profile.tagline}</p>
+      <div className="space-y-4">
+        <h1 className="text-white">{profile.company}</h1>
+        <p className="tagline">{profile.tagline}</p>
+        <p className="max-w-2xl text-body">{profile.description}</p>
       </div>
-      <p className="max-w-3xl text-body">{profile.description}</p>
+      <div className="max-w-2xl mx-auto text-center text-body">
+        <p className="mb-2">
+          We use very, very complex systems and AI. We operate at the top tier.
+        </p>
+        <p className="mb-2">
+          You call us when you have real, serious problems to resolve — and we solve them.
+        </p>
+      </div>
       <a
         href="#who-we-are"
-        className="inline-flex items-center gap-1 text-sm font-medium text-accent underline-offset-4 hover:underline"
-        aria-label="Read more about who we are"
+        className="inline-flex items-center gap-1 text-accent underline-offset-4 hover:underline"
+        aria-label="Read the full profile"
       >
         Read the full profile
         <svg
