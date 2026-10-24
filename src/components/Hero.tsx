@@ -16,13 +16,9 @@ export default function Hero() {
         <h1 className="text-white">{profile.company}</h1>
         <p className="tagline">{profile.tagline}</p>
         <p className="max-w-2xl text-body">{profile.description}</p>
-      </div>
-      <div className="max-w-2xl mx-auto text-center text-body">
-        <p className="mb-2">
-          We use very, very complex systems and AI. We operate at the top tier.
-        </p>
-        <p className="mb-2">
-          You call us when you have real, serious problems to resolve — and we solve them.
+        <p className="max-w-xl text-body">
+          We operate at the top tier with very, very complex systems and AI — you call
+          us when you have real, serious problems to resolve, and we solve them.
         </p>
       </div>
       <a
