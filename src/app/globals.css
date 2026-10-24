@@ -1,25 +1,32 @@
+/* Cormorant Garamond — the serif family used throughout the source PDF.
+   Self-hosted via next/font/google in layout.tsx (optimised, no runtime
+   network dependency). The stack below is the fallback chain. */
 @import "tailwindcss";
 
 @theme inline {
+  /*
+   * House of Mzozoyana dark theme.
+   * Palette taken directly from the official business-profile PDF:
+   *   a black canvas (#000000), near-white body text (#f0f0f0), white
+   *   headings (#ffffff) and a warm gold accent (#c8a45c) for the step
+   *   markers, links and the logo glyph.
+   */
   --font-sans:
-    ui-sans, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-    "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+    "Cormorant Garamond", Georgia, "Times New Roman", serif;
   --font-mono:
     ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
     "Courier New", monospace;
 
-  /* House of Mzozoyana brand palette */
-  --color-brand: #0d5942; /* deep emerald — bold, tech-forward, grounded */
-  --color-brand-hover: #0f6e52;
-  --color-brand-soft: #ecfdf5; /* emerald 50 tint */
-  --color-border: #e5e7eb;
-  --color-border-dark: #d1d5db;
+  --color-body: #f0f0f0;
+  --color-divider: #2a2a2a;
+  --color-surface: #111111;
+  --color-accent: #c8a45c; /* gold — the PDF's step-number / brand accent */
 }
 
 /*
-  The business profile is a single, carefully laid-out document. We keep a
-  light, high-contrast canvas so the content is comfortable to read and easy
-  to review.
+  The business profile is a single, carefully laid-out document. A black
+  canvas keeps it focused and lets the near-white copy and gold accents do
+  the work of framing the content.
 */
 html {
   scroll-behavior: smooth;
@@ -27,10 +34,10 @@ html {
 }
 
 body {
-  background: #ffffff;
-  color: #1f2937;
+  background: #000000;
+  color: var(--color-body);
   font-family: var(--font-sans);
-  line-height: 1.625;
+  line-height: 1.7;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -41,9 +48,9 @@ body {
   }
 }
 
-/* Custom selection colour that respects the brand. */
+/* Branded text selection in the page's gold accent. */
 ::selection {
-  background-color: #d1fae5;
-  color: #0d5942;
+  background-color: var(--color-accent);
+  color: #000000;
 }
 

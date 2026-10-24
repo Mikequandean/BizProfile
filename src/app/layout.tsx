@@ -1,7 +1,17 @@
 import type { Metadata } from "next";
+import { Cormorant_Garamond } from "next/font/google";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import "./globals.css";
+
+/* Cormorant Garamond — the serif face used throughout the source PDF.
+   Self-hosted by Next so the built site needs no runtime font request. */
+const cormorant = Cormorant_Garamond({
+  subsets: ["latin"],
+  weight: ["300", "400", "500", "600", "700"],
+  style: ["normal", "italic"],
+  display: "swap",
+});
 
 export const metadata: Metadata = {
   title: {
@@ -55,7 +65,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className="h-full scroll-smooth">
-      <body className="flex min-h-screen flex-col bg-white text-gray-900">
+      <body className={`flex min-h-screen flex-col bg-black text-body antialiased ${cormorant.className}`}>
         <Header />
         <main className="flex-1">{children}</main>
         <Footer />

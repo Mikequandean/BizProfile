@@ -17,9 +17,9 @@ const iconFor: Record<string, IconName> = {
 
 export default function WhatWeDo() {
   return (
-    <section id="what-we-do" className="border-t border-gray-200">
+    <section id="what-we-do" className="border-t border-divider">
       <div className="mx-auto max-w-5xl px-6 py-12 md:px-8 md:py-16">
-        <div className="mx-auto max-w-3xl space-y-6 text-lg text-gray-700">
+        <div className="mx-auto max-w-3xl space-y-6 text-lg text-body">
           <p className="m-0">{profile.whatWeDo.introA}</p>
           <p className="m-0">{profile.whatWeDo.introB}</p>
           <p className="m-0 mb-2">{profile.whatWeDo.introC}</p>
@@ -31,19 +31,19 @@ export default function WhatWeDo() {
             return (
               <article
                 key={area.id}
-                className="group flex gap-5 rounded-2xl border border-gray-200 p-6 transition-shadow hover:shadow-md"
+                className="group flex gap-5 rounded-2xl border border-divider bg-surface p-6 shadow-lg transition-shadow hover:shadow-xl"
               >
                 <span
                   aria-hidden="true"
-                  className="-mt-1.5 flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-brand-soft text-brand group-hover:scale-105"
+                  className="-mt-1.5 flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-accent text-black group-hover:scale-105"
                 >
                   <Icon className="h-5 w-5" />
                 </span>
                 <div>
-                  <h3 className="mb-2 text-lg font-semibold text-gray-900">
+                  <h3 className="mb-2 text-lg font-semibold text-white">
                     {area.title}
                   </h3>
-                  <p className="m-0 text-gray-700">{area.description}</p>
+                  <p className="m-0 text-body">{area.description}</p>
                 </div>
               </article>
             );

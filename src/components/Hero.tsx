@@ -9,21 +9,19 @@ export default function Hero() {
         alt={`${profile.company} logo`}
         width={120}
         height={120}
-        className="h-24 w-24 rounded-2xl object-contain"
+        className="h-24 w-24 rounded-2xl object-contain drop-shadow-[0_0_12px_rgba(200,164,92,0.55)]"
         priority
       />
       <div>
-        <h1 className="text-4xl font-extrabold tracking-tight text-gray-900 sm:text-5xl">
+        <h1 className="text-4xl font-extrabold tracking-tight text-white sm:text-5xl">
           {profile.company}
         </h1>
-        <p className="mt-4 max-w-2xl text-lg text-gray-600">
-          {profile.tagline}
-        </p>
+        <p className="mt-4 max-w-2xl text-lg text-body">{profile.tagline}</p>
       </div>
-      <p className="max-w-3xl text-gray-700">{profile.description}</p>
+      <p className="max-w-3xl text-body">{profile.description}</p>
       <a
         href="#who-we-are"
-        className="inline-flex items-center gap-1 text-sm font-medium text-brand underline-offset-4 hover:underline"
+        className="inline-flex items-center gap-1 text-sm font-medium text-accent underline-offset-4 hover:underline"
         aria-label="Read more about who we are"
       >
         Read the full profile

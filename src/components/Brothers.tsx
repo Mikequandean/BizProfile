@@ -8,7 +8,7 @@ export default function Brothers() {
       className="mx-auto max-w-5xl px-6 py-12 md:px-8 md:py-16"
     >
       <div className="mx-auto max-w-3xl">
-        <p className="text-base text-gray-700">{profile.brothers.intro}</p>
+        <p className="text-base text-body">{profile.brothers.intro}</p>
       </div>
       <div className="mt-12 grid grid-cols-1 gap-10 sm:grid-cols-2 sm:gap-8">
         {profile.brothers.members.map((member) => (
@@ -21,9 +21,9 @@ export default function Brothers() {
               alt={member.alt}
               width={280}
               height={370}
-              className="h-auto w-64 rounded-2xl object-cover shadow-lg"
+              className="h-auto w-64 rounded-2xl object-cover shadow-lg ring-1 ring-accent/20"
             />
-            <figcaption className="text-xl font-semibold text-gray-900">
+            <figcaption className="mt-4 text-xl font-semibold text-white">
               {member.name}
             </figcaption>
           </figure>
