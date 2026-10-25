@@ -22,7 +22,7 @@ export default function Brothers() {
               alt={member.alt}
               width={420}
               height={560}
-              className="h-auto w-96 rounded-lg object-cover surface-box ring-1 ring-white/20 md:w-[340px]"
+              className="h-auto w-96 rounded-none object-cover surface-box ring-1 ring-white/20 md:w-[340px]"
             />
             <figcaption className="mt-4 text-white text-lg">{member.name}</figcaption>
           </figure>
