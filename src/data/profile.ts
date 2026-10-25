@@ -64,11 +64,11 @@ export type Profile = {
 export const profile: Profile = {
   company: "House of Mzozoyana",
   tagline:
-    "A technology company that builds systems for the problems businesses face.",
+    "AI and LLM-powered systems for hardcore business problems.",
   description:
     "House of Mzozoyana is a bold, vigorous technology company that builds software systems for other businesses.",
   whoWeAre:
-    "House of Mzozoyana is a bold, vigorous technology company that builds software systems for other businesses. Most companies, whatever their size or industry, run into the same kinds of operational problems: processes that are slow, work that is still done by hand, information scattered across too many places, and money or opportunities that quietly slip away. We exist to fix those problems. We take the time to understand what is actually going wrong inside a business, and then we design and build a system that solves it properly, so the people in the company can spend their time on the work that moves the business forward.",
+    "Data and LLMs are currency in our eyes. We treat information as an asset and put large language models to work on the hardcore problems most businesses face — not as buzzwords, but as real engines that process information, surface insights, and automate the work that used to slow companies down. House of Mzozoyana is a technology company that builds software systems for other businesses. Most companies, whatever their size or industry, run into the same kinds of operational problems: processes that are slow, work that is still done by hand, information scattered across too many places, and money or opportunities that quietly slip away. We exist to fix those problems. We take the time to understand what is actually going wrong inside a business, and then we design and build a system that solves it properly, so the people in the company can spend their time on the work that moves the business forward.",
   brothers: {
     intro:
       "Xhanti Mzozoyana born first on 17 January 1997 and Qhama Mzozoyana follows behind born 25 November 2005. House of Mzozoyana is led by two brothers, Qhama and Xhanti Mzozoyana, who are aggressive strategists at heart. They approach every problem the same way: study it closely, find the sharpest route through it, cut deep, and then move on it decisively. That mindset is built into how the company works. We don't wait for problems to become crises, and we don't settle for quick fixes. We look for the move that makes the biggest difference and we go after it with full commitment. Being brothers gives the company something rare: a shared vision, complete trust, and the ability to be direct with each other. That honesty carries over into how we treat our clients, who get the same straight talk and the same determination to see their problems solved.",
@@ -181,7 +181,7 @@ export const profile: Profile = {
         number: "3",
         title: "Build and launch",
         description:
-          "We then build the system around that agreed problem and get it running in the business, making sure the people who will use it every day are comfortable with it.",
+          "We then build the system around that agreed problem using AI and LLMs where they add real value, getting it running in the business, making sure the people who will use it every day are comfortable with it.",
       },
       {
         number: "4",
@@ -197,7 +197,7 @@ export const profile: Profile = {
     realProblems: {
       title: "Systems built around real problems, not generic software",
       description:
-        "We don't hand clients a product and ask them to adapt to it. We start from the problem they actually have and build around it, so the system fits the way their business really works.",
+        "We don't hand clients a product and ask them to adapt to it. We start from the problem they actually have and build around it, using AI and LLMs to solve the hardcore problems off-the-shelf software can't touch, so the system fits the way their business really works.",
     },
     tieOurSuccess: {
       title: "We tie our success to theirs",
