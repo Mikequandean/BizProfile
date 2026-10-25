@@ -3,7 +3,7 @@ import WhoWeAre from "@/components/WhoWeAre";
 import Brothers from "@/components/Brothers";
 import WhatWeDo from "@/components/WhatWeDo";
 import Certifications from "@/components/Certifications";
-import ProfilePdf from "@/components/ProfilePdf";
+import CanvaProfile from "@/components/CanvaProfile";
 import HowWeWork from "@/components/HowWeWork";
 import Differentiators from "@/components/Differentiators";
 
@@ -15,7 +15,7 @@ export default function Home() {
       <Brothers />
       <WhatWeDo />
       <Certifications />
-      <ProfilePdf />
+      <CanvaProfile />
       <HowWeWork />
       <Differentiators />
     </>
