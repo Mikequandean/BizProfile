@@ -16,6 +16,16 @@ export type ProcessStep = {
   description: string;
 };
 
+export type Certification = {
+  person: string;
+  name: string;
+  issuer: string;
+  issued: string;
+  expires: string;
+  credentialId?: string;
+  skills: string[];
+};
+
 export type TeamMember = {
   name: string;
   /** /public path of the portrait image */
@@ -47,6 +57,7 @@ export type Profile = {
     realProblems: { title: string; description: string };
     tieOurSuccess: { title: string; description: string };
   };
+  certifications: Certification[];
   goal: string;
 };
 
@@ -194,6 +205,64 @@ export const profile: Profile = {
         "We want clients to be so happy with the results that they talk about us unprompted and refer us to others. Our reputation grows when our clients' businesses do, so we care about how a system performs long after it launches.",
     },
   },
+  certifications: [
+    {
+      person: "Qhama Mzozoyana",
+      name: "Sophos Firewall Certified Engineer v21.0 (ET8O)",
+      issuer: "Sophos",
+      issued: "Mar 2025",
+      expires: "Jan 2027",
+      skills: ["Firewalls", "Cyber Kill Chain Framework"],
+    },
+    {
+      person: "Qhama Mzozoyana",
+      name: "Sophos Central Detection and Response Engineer",
+      issuer: "Sophos",
+      issued: "Dec 2024",
+      expires: "Sep 2026",
+      skills: [
+        "Endpoint Detection & Response",
+        "Network Detection & Response",
+      ],
+    },
+    {
+      person: "Xhanti Mzozoyana",
+      name: "CompTIA CySA+",
+      issuer: "CompTIA Certification",
+      issued: "Aug 2024",
+      expires: "Jan 2030",
+      credentialId: "CS0-003",
+      skills: ["Behavioral Analytics", "Blue Teamer"],
+    },
+    {
+      person: "Xhanti Mzozoyana",
+      name: "CompTIA Linux+",
+      issuer: "CompTIA Certification",
+      issued: "May 2024",
+      expires: "Jan 2030",
+      credentialId: "XKO-005",
+      skills: ["Essential System Services"],
+    },
+    {
+      person: "Xhanti Mzozoyana",
+      name: "CompTIA Security Analytics (CSAP Stackable Certification)",
+      issuer: "CompTIA",
+      issued: "Nov 2024",
+      expires: "Nov 2028",
+      skills: [
+        "Identity and Access Management (IAM)",
+        "Application Security",
+      ],
+    },
+    {
+      person: "Xhanti Mzozoyana",
+      name: "CompTIA Security+",
+      issuer: "CompTIA",
+      issued: "Nov 2024",
+      expires: "Nov 2028",
+      skills: ["Penetration Testing", "Network Security"],
+    },
+  ],
   goal:
     "Our goal is to build systems that make a real difference to the businesses we work with. The real asset we are building is reputation: clients who feel they got more value than they expected, who speak well of us without being asked, and who bring us the next client. We want House of Mzozoyana to be known as a company that solves real problems and delivers on what it promises, and we want that reputation to last.",
 };

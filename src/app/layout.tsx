@@ -1,16 +1,23 @@
 import type { Metadata } from "next";
-import { Cormorant_Garamond } from "next/font/google";
-import Header from "@/components/Header";
+import { Inter, Cormorant_Garamond } from "next/font/google";
 import Footer from "@/components/Footer";
 import "./globals.css";
 
-/* Cormorant Garamond — the serif face used throughout the source PDF.
-   Self-hosted by Next so the built site needs no runtime font request. */
-const cormorant = Cormorant_Garamond({
+/* Inter — clean, readable body sans-serif. Cormorant Garamond — the serif
+   face used for headings in the source PDF. Both are self-hosted by Next
+   so the built site needs no runtime font request. */
+const inter = Inter({
+  weight: ["400", "500", "600"],
   subsets: ["latin"],
+  display: "swap",
+  variable: "--font-sans",
+});
+const cormorant = Cormorant_Garamond({
   weight: ["300", "400", "500", "600", "700"],
   style: ["normal", "italic"],
+  subsets: ["latin"],
   display: "swap",
+  variable: "--font-display",
 });
 
 export const metadata: Metadata = {
@@ -33,7 +40,7 @@ export const metadata: Metadata = {
   creator: "House of Mzozoyana",
   publisher: "House of Mzozoyana",
   icons: [{ rel: "icon", url: "/logo.png", type: "image/png", sizes: "500x500" }],
-  metadataBase: new URL("https://houseofmzozoyana.com"),
+  metadataBase: new URL("https://www.houseofmzozoyanaglobal.org"),
   robots: {
     index: true,
     follow: true,
@@ -45,7 +52,7 @@ export const metadata: Metadata = {
       "House of Mzozoyana builds software systems that solve the operational problems most businesses face.",
     type: "website",
     locale: "en",
-    url: "https://houseofmzozoyana.com",
+    url: "https://www.houseofmzozoyanaglobal.org",
     siteName: "House of Mzozoyana",
     images: [
       {
@@ -64,9 +71,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className="h-full scroll-smooth">
-      <body className={`flex min-h-screen flex-col bg-black text-body antialiased ${cormorant.className}`}>
-        <Header />
+    <html lang="en" className={`h-full scroll-smooth ${inter.variable} ${cormorant.variable}`}>
+      <body className="flex min-h-screen flex-col bg-black text-body antialiased">
         <main className="flex-1">{children}</main>
         <Footer />
       </body>

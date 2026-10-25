@@ -84,6 +84,19 @@ export const Icons = {
       <circle cx={6} cy={16} r={1.5} />
     </svg>
   ),
+  // shield / security certification
+  shield: (p: SVGProps<SVGSVGElement>) => (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.5} {...p}>
+      <path d="M12 1l3 5v4a8 8 0 0 1-8 8 8 8 0 0 1-8-8V6l3-5z" />
+    </svg>
+  ),
+  // badge / certificate
+  badge: (p: SVGProps<SVGSVGElement>) => (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.5} {...p}>
+      <path d="M20 4H4c-1.1 0-2 0.9-2 2v12c0 1.1 0.9 2 2 2h16c1.1 0 2-0.9 2-2V6c0-1.1-0.9-2-2-2z" />
+      <path d="M12 13l3 3 7-7" />
+    </svg>
+  ),
 } satisfies Record<string, Icon>;
 
 export type IconName = keyof typeof Icons;
