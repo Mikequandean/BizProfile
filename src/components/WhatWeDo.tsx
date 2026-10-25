@@ -77,6 +77,14 @@ export default function WhatWeDo() {
               around it, so the system fits the way their business really
               works.
             </p>
+            <p className="m-0">
+              In our eyes, data and LLMs are currency. We build around hardcore
+              problems using AI and large language models — not as buzzwords,
+              but as real engines that process information, surface insights,
+              and automate the work that used to slow businesses down. Every
+              system we ship treats data as an asset and puts LLMs to work
+              solving the hard problems our clients actually face.
+            </p>
           </div>
         </div>
       </div>
