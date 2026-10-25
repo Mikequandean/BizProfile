@@ -1,17 +1,22 @@
-/* Cormorant Garamond — the serif family used throughout the source PDF.
-   Self-hosted via next/font/google in layout.tsx (optimised, no runtime
-   network dependency). The stack below is the fallback chain. */
+/* Inter (body copy) and Cormorant Garamond (headings) — both self-hosted
+   via next/font/google in layout.tsx (optimised, no runtime network
+   dependency). The stacks below are the fallback chains. */
 @import "tailwindcss";
 
 @theme inline {
   /*
    * House of Mzozoyana dark theme.
    * Palette taken directly from the official business-profile PDF:
-   *   a black canvas (#000000), near-white body text (#f0f0f0), white
-   *   headings (#ffffff) and a warm gold accent (#c8a45c) for the step
-   *   markers, links and the logo glyph.
+   *   black canvas (#000000), near-white body text (#f0f0f0), white
+   *   headings (#ffffff), warm gold accent (#c8a45c) used ONLY for step
+   *   numbers and thin decorative rules.
+   *   Body copy uses Inter; headings keep the PDF's Cormorant Garamond
+   *   serif at light weight — never bold.
    */
   --font-sans:
+    "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, sans-serif;
+  --font-display:
     "Cormorant Garamond", Georgia, "Times New Roman", serif;
   --font-mono:
     ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
@@ -20,7 +25,7 @@
   --color-body: #f0f0f0;
   --color-divider: #2a2a2a;
   --color-surface: #111111;
-  --color-accent: #c8a45c; /* gold — the PDF's step-number / brand accent */
+  --color-accent: #c8a45c; /* gold — step numbers and decorative rules only */
 }
 
 /*
@@ -30,16 +35,72 @@
 */
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: 4.5rem;
 }
 
 body {
   background: #000000;
   color: var(--color-body);
-  font-family: var(--font-sans);
+  font-family: var(--font-sans), sans-serif; /* Inter body text, normal weight */
+  font-size: 1rem;    /* 16px — body copy */
   line-height: 1.7;
+  font-weight: 400;   /* normal weight — never bold */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+/* Headings keep the PDF's serif face at a light weight — never bold. */
+/*
+  Headings — Cormorant Garamond, light weight (never bold).
+  Gold underline: 2px solid #c8a45c, flush against the text
+  (no padding, no left offset) so it ends right at the edge of the title.
+*/
+h1 {
+  font-family: var(--font-display);
+  font-weight: 300;
+  font-size: 2.4rem;        /* 38.4px — company name on cover */
+  color: #ffffff;
+  letter-spacing: -0.02em;
+}
+h2 {
+  font-family: var(--font-display);
+  font-weight: 300;
+  font-size: 1.35rem;       /* 21.6px — section headings */
+  color: #ffffff;
+  letter-spacing: -0.01em;
+  border-bottom: 2px solid var(--color-accent);
+  padding-bottom: 0.12em;
+  margin-bottom: 0.4em;
+  margin-top: 0.2em;
+}
+h3 {
+  font-family: var(--font-display);
+  font-weight: 300;
+  font-size: 1.2rem;        /* 19.2px — subsection titles, clearly larger than body */
+  color: #ffffff;
+  margin-top: 0.8em;
+  margin-bottom: 0.3em;
+}
+h4 {
+  font-family: var(--font-display);
+  font-weight: 300;
+  font-size: 1.1rem;        /* 17.6px — larger than body */
+  color: #ffffff;
+}
+h5,
+h6 {
+  font-family: var(--font-display);
+  font-weight: 300;
+  font-size: 1.05rem;       /* 16.8px — larger than body */
+  color: #ffffff;
+}
+
+a {
+  color: var(--color-accent);
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+a:hover {
+  text-decoration-thickness: 2.5px;
 }
 
 @layer base {
@@ -52,5 +113,27 @@ body {
 ::selection {
   background-color: var(--color-accent);
   color: #000000;
+}
+
+/* Step-number circles — gold, matching the PDF. */
+.step-number {
+  font-family: var(--font-display);
+  font-weight: 300;
+  font-size: 1.8rem;     /* 28.8px — PDF step numbers */
+  color: #000000;
+  background: var(--color-accent);
+}
+
+/* Tagline — light Cormorant, white, matching the PDF cover. */
+.tagline {
+  font-family: var(--font-display);
+  font-weight: 300;
+  font-size: 1.0125rem;  /* 16.2px — PDF tagline */
+  color: #ffffff;
+}
+
+/* Surface boxes for brother portraits — #111111 per the PDF. */
+.surface-box {
+  background: var(--color-surface);
 }
 
