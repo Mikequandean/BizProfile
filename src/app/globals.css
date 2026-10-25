@@ -48,6 +48,17 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+/* Body text — rises slightly on hover for a tactile, alive feel. */
+p {
+  display: inline-block;
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+p:hover {
+  transform: translateY(-4px);
+  filter: brightness(1.15);
+}
+
 /* Headings keep the PDF's serif face at a light weight — never bold. */
 /*
   Headings — Cormorant Garamond, light weight (never bold).
